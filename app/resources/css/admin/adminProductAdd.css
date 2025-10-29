@@ -1,0 +1,149 @@
+form::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.tester{
+    color: red;
+}
+
+.productAddForm{
+   width: 90%; 
+   margin: 0 auto;
+   padding: 10px;
+   border: 1px solid #cecfd0;
+   border-radius: 5px;
+   background: #f4f6f9;
+}
+
+.productInputLabel{
+    font-weight: bold;
+    text-transform: uppercase;
+    /* display: block; */
+}
+
+.productInputs{
+    width: 100%;
+    height: 33px;
+    border: 1px solid #d6d7da;
+    border-radius: 5px;
+}
+
+.productInputDescription{
+    width: 100%;
+    height: 33px;
+    border: 1px solid #d6d7da;
+    border-radius: 5px;
+}
+
+.productSupplierList{
+    width: 100%;
+    background: white;
+    border: 1px solid #d6d7da;
+    border-radius: 5px;
+    height: 33px;
+}
+
+.noSupplierAvailable{
+    color: red;
+}
+
+.productInputImage{
+    width: 100%;
+    /* background: white;
+    border: 1px solid #d6d7da; */
+    border-radius: 5px;
+    height: 33px;
+}
+
+.productAddInputContainer{
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 50%;
+    padding: 5px;
+}
+
+.productButtonContainer{
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+
+.productAddBtn{
+   background: #f685a1;
+   border: 1px solid #f685a1;
+   color: #fff;
+   padding: 10px;
+   margin-top: 10px; 
+   float: right;
+}
+
+.productAddBtn:hover{
+    background: #fc5780;
+    transition: 0.3s all;
+}
+
+.fillupErrorMessageContainer{
+    width: 100%;
+    text-align: center;
+}
+
+.fillupErrorMessage{
+    color: red;
+    margin-top: 15px;
+}
+
+.errors{
+    color: red;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.formOutputContainer{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.insertSuccess{
+    color: green;
+    font-weight: bold;
+
+}
+
+.insertError{
+    color: red;
+    font-weight: bold;
+}
+
+div.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+div.column{
+    width: 100%;
+    padding: 0px 10px;
+}
+
+div.column-5{
+    width: 41.67%;
+}
+
+div.column-7{
+    width: 58.33%;
+}
+
+.addProductHeader{
+    font-size: 21px;
+    color: #f685a1;
+    border-bottom: 1px solid #ffd7e1;
+    padding: 10px;
+    padding-bottom: 11px;
+    border-left: 4px solid #f690bf;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,250 @@
+/* SIDEBAR */
+
+.dashboard_sidebar{
+  width: 20%;
+  background: #323232;
+  height: 100vh;
+  transition: width 0.8s ease;
+}
+
+.dashboard_sidebar.collapsed {
+  width: 80px;
+}
+
+
+.dashboard_content_container{
+  width: 80%;
+  background: #f4f6f9;
+  transition: width 0.8s ease;
+}
+
+.dashboard_logo{
+  color: #f685a1;
+  font-size: 80px;
+  text-align: center;
+  transition: font-size 0.8s ease;
+} 
+
+.dashboard_sidebar_user{
+  padding-left: 15px;
+  /* text-align: center; */
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff;
+  transition: padding-left 0.8s ease, text-align 0.8s ease;
+  margin-bottom: 15px;
+}
+
+.dashboard_sidebar_user img{
+  width: 70px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #f685a1;
+  margin-right: 5px;
+  vertical-align: middle;
+  transition: width 0.8s ease;
+}
+
+.dashboard_sidebar_user span{
+  font-size: 18px;
+  margin-left: 3px;
+  margin-right: 3px;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #fff;
+  top: 20%;
+  transition: margin 0.8s ease;
+}
+
+ul.dashboard_menu_lists{
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.liMainMenu{
+  padding: 0px 0px;
+  
+  text-transform: uppercase;
+}
+
+.liMainMenu a{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+.liMainMenu a i{
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.fa-solid.fa-gauge-simple-high{
+  margin-right: 7px;
+  font-size: 23px;
+  
+}
+
+.fa-solid.fa-boxes-stacked{
+  width: 20px;
+  font-size: 20px;
+}
+
+.fa-solid.fa-truck-fast{
+  width: 20px;
+  font-size: 20px;
+}
+
+.fa-solid.fa-user-plus{
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.menuActive{
+  background: #f685a1;
+  color: #fff;
+}
+
+.dashboard_menu_lists li:hover{
+  background: #f685a1;
+  color: #fff;
+  transition: 0,3s all;
+}
+
+.menuText{
+  font-size: 15px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+.menuText.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.textCapitalize{
+  text-transform: capitalize;
+}
+
+
+.revenueMenu{
+  font-size: 17px;
+
+}
+
+.accountsReceivableMenu{
+  font-size: 17px;
+
+}
+
+i.mainMenuIconArrow{
+  float: right;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+a.subMenuLink{
+  padding-left: 25px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  text-transform: none;
+}
+
+.liSubMenu .subMenuLink i{
+  font-size: 15px !important;
+  width: 10px;
+}
+
+.subMenuText{
+  text-transform: none;
+  font-size: 13px;
+}
+
+.subMenu{
+  width: 100%;
+  background: #b05a70;
+  display: none;
+}
+
+.mainMenuIconArrow{
+  transition: transform 0.3s ease;
+}
+
+.subMenuActive{
+  font-weight: bold;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  background: #763a49;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .dashboard_sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    height: 100%;
+    z-index: 200;
+  }
+  .dashboard_sidebar.active {
+    left: 0;
+  }
+  .dashboard_logo { font-size: 50px; }
+  .dashboard_sidebar_user img { width: 50px; }
+  .dashboard_sidebar_user span { font-size: 14px; }
+}
+
+
+@media (max-width: 480px) {
+  .dashboard_sidebar {
+    width: 160px;
+    left: -160px;
+  }
+  .dashboard_sidebar_user img { width: 40px; }
+  .dashboard_sidebar_user span { font-size: 12px; }
+  .liMainMenu a { font-size: 14px; }
+  .menuText { display: none; } /* Only icons */
+}
+
+/* Hide sidebar on mobile */
+@media (max-width: 768px) {
+  #dashboard_sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden */
+    width: 250px;
+    height: 100%;
+    background: #2d2d2d;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  /* When sidebar is open */
+  #dashboard_sidebar.open {
+    left: 0;
+  }
+
+  /* Content takes full width when sidebar hidden */
+  #dashboard_content_container {
+    width: 100% !important;
+  }
+
+  /* Sidebar toggle button */
+  #toggleSideBarBtn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1101;
+    cursor: pointer;
+  }
+}
+/* Responsive end */
+
+/* SIDEBAR END */

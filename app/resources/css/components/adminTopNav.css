@@ -1,0 +1,42 @@
+/* TOPNAV */
+
+.dashboard_topNav {
+  background: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* places buttons left & right */
+  align-items: center;            /* vertically centered */
+}
+
+.dashboard_topNav a {
+  color: #848383;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#logoutBtn {
+  margin-left: auto; /* push logout button to the right */
+}
+
+#logoutBtn:hover {
+  color: red;
+  transition: 0.3s all;
+}
+
+/* --- TOPNAV RESPONSIVE --- */
+@media (max-width: 768px) {
+  .dashboard_topNav {
+    padding: 10px 15px;
+  }
+  .dashboard_topNav a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard_topNav a {
+    font-size: 14px;
+  }
+}
+
+/* TOPNAV END */
