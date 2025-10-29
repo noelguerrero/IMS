@@ -79,3 +79,6 @@ Note: their is a bud on add user form: even though a certain input has an error,
 - Added Sweet Alert login message
 - Add Supplier Completed
 - Table of supplier with pagination (used temporary values). 
+
+## Wednesday October 29, 2025
+- Moving the whole file into GitHub repository

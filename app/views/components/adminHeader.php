@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<?= BASE_URL;?>../app/resources/css/admin/adminUserList.css">
     <link rel="stylesheet" href="<?= BASE_URL;?>../app/resources/css/admin/adminSupplierAdd.css">
     <link rel="stylesheet" href="<?= BASE_URL;?>../app/resources/css/admin/adminSupplierList.css">
+    <link rel="stylesheet" href="<?= BASE_URL;?>../app/resources/css/admin/adminProductList.css">
 
     <!-- FONTAWESOME LINK -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">

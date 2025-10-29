@@ -1,0 +1,109 @@
+.productTableSectionHeader{
+    font-size: 21px;
+    color: #f685a1;
+    border-bottom: 1px solid #ffd7e1;
+    padding: 10px;
+    padding-bottom: 11px;
+    border-left: 4px solid #f690bf;
+    margin-bottom: 30px;
+}
+
+.productTableContainer table, th, td{
+    border: 1px solid #cacaca;
+    border-collapse: collapse;
+}
+
+.productsTable{
+    width: 100%;
+}
+
+.productsTable th{
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #f4f6f9;
+}
+
+.productSupplierColumn{
+    width: 15%;
+}
+
+.productSupplierRow{
+    /* list-style: none; */
+    text-align: left;
+}
+
+.actionColumn{
+    width: 15%;
+}
+
+.productRow{
+    height: 50px;
+    align-items: center;
+}
+
+.productsTable td{
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+}
+
+.productImageRowData{
+    align-items: center;
+}
+
+.productImageHolder{
+    height: 80px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.productImage{
+    width: 80px;
+    display: block;
+    margin: auto;
+}
+
+.productNoImageOutput{
+    color: red;
+    margin: auto;
+}
+
+.productsCount{
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f685a1;
+    padding-right: 10px;
+}
+
+.productListUpdateBtn{
+    margin-right: 5px;
+    color: rgb(0, 163, 0);
+    text-decoration: none;
+}
+
+.productListUpdateBtn:hover{
+    color: rgb(5, 101, 5);
+    transition: 0.3s all;
+}
+
+.productListDeleteBtn{
+    color: red;
+    text-decoration: none;
+}
+
+.productListDeleteBtn:hover{
+    color: rgb(189, 2, 2);
+    transition: 0.3s all;
+}
+
+.noProductImage{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
