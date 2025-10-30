@@ -16,7 +16,7 @@
         public $connection;
         public $statement;
 
-        public function iniDB()
+        public function iniDb()
         {
             $dsn = "mysql:host={$this->host};dbname={$this->dbname};port={$this->port}";
 

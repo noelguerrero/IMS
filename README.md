@@ -84,3 +84,7 @@ Note: their is a bud on add user form: even though a certain input has an error,
 ### Wednesday October 29, 2025
 - Moving the whole file into GitHub repository
 - Product List View Template and its CSS
+
+### Thursday October 30, 2025
+- Displaying suppliers in supplier list
+- note: changing the function iniDB to iniDb in database.php

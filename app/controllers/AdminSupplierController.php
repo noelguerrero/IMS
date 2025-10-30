@@ -1,18 +1,58 @@
 <?php
     use app\models\Supplier;
+    use app\models\User;
 
     class AdminSupplierController
     {
         private $supplierModel;
+        private $userModel;
 
         public function __construct()
         {
             $this->supplierModel = new Supplier();
+            $this->userModel = new User();
         }
 
         public function index()
         {
             require __DIR__ . '/../views/admin/adminSupplierList.view.php';
+        }
+
+        public function renderSupplierRows()
+        {
+            $suppliers = $this->supplierModel->getAllSuppliers();
+
+            if(empty($suppliers))
+            {
+                return "<tr><td class='noSupplier' colspan='8'>No suppliers found.</td></tr>";
+            }
+
+            $rows = '';
+            foreach($suppliers as $index => $supplier)
+            {
+                $rows .=
+                "<tr>
+                    <td>" . ($index + 1) . "</td>
+                    <td>" . htmlspecialchars($supplier['supplier_name']) . "</td>
+                    <td>" . htmlspecialchars($supplier['supplier_location']) ."</td>
+                    <td>" . htmlspecialchars($supplier['supplier_email']) . "</td>
+                ";
+                $creatorId = $supplier['created_by'];
+                $createdBy = $this->userModel->getUserEmailById($creatorId);
+                    
+                $rows .=
+                "
+                    <td>" . $createdBy . "</td>
+                    <td>" . htmlspecialchars($supplier['created_at'] ?? '') . "</td>
+                    <td>" . htmlspecialchars($supplier['updated_at'] ?? '') . "</td>
+                    <td>
+                        <a href='#' class='supplierListUpdateBtn'><i class='fa-solid fa-pencil'></i> Edit</a>
+                        <a href='#' class='supplierListDeleteBtn'><i class='fa-solid fa-trash'></i> Delete</a>
+                    </td>
+                </tr>
+                ";
+            }
+            echo $rows;
         }
 
         public function loginUnable()

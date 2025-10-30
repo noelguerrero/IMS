@@ -31,19 +31,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1.</td>
-                                            <td>Alaska Corp</td>
-                                            <td>Dasma</td>
-                                            <td>alaska@gmail.com</td>
-                                            <td>Noel</td>
-                                            <td>1/1/1</td>
-                                            <td>1/1/1</td>
-                                            <td>
-                                                <a href='#' class='supplierListUpdateBtn'><i class='fa-solid fa-pencil'></i> Edit</a>
-                                                <a href='#' class='supplierListDeleteBtn'><i class='fa-solid fa-trash'></i> Delete</a>
-                                            </td>
-                                        </tr>
+                                        <?= AdminSupplierController::renderSupplierRows();?>
                                     </tbody>
                                 </table>
                             </div>

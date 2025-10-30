@@ -6,6 +6,12 @@
     {
         protected $table = 'suppliers';
 
+        public function checkSupplierModel()
+        {
+            var_dump("Supplier model is imported");
+            die();
+        }
+
         public function getSupplierById($id)
         {
             $this->iniDb();
@@ -15,10 +21,12 @@
             return $stmt->fetch();
         }
 
-        public function checkSupplierModel()
+        public function getAllSuppliers()
         {
-            var_dump("Supplier is imported");
-            die();
+            $this->iniDb();
+            $stmt = $this->connection->prepare("SELECT * FROM {$this->table}");
+            $stmt->execute();
+            return $stmt->fetchAll();
         }
 
         public function checkSupplierEmailAvailability($SupplierEmail)

@@ -24,6 +24,15 @@
             return $stmt->fetch();
         }
 
+        public function getUserEmailById($id)
+        {
+            $this->iniDb();
+            $stmt = $this->connection->prepare("SELECT email FROM {$this->table} WHERE user_id = :id");
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            return $stmt->fetchColumn();
+        }
+
         public function checkEmailAvailability($email)
         {
             $this->iniDb();
