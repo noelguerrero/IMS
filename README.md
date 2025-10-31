@@ -88,3 +88,8 @@ Note: their is a bud on add user form: even though a certain input has an error,
 ### Thursday October 30, 2025
 - Displaying suppliers in supplier list
 - note: changing the function iniDB to iniDb in database.php
+
+### Friday October 31, 2025
+- Delete Supplier
+- Adding feedback on delete supplier
+- Error on supplier table when its empty fixed

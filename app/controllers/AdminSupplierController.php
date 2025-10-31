@@ -18,6 +18,12 @@
             require __DIR__ . '/../views/admin/adminSupplierList.view.php';
         }
 
+        public function checkSupplierController()
+        {
+            var_dump("Supplier controller is working");
+            die();
+        }
+
         public function renderSupplierRows()
         {
             $suppliers = $this->supplierModel->getAllSuppliers();
@@ -47,18 +53,39 @@
                     <td>" . htmlspecialchars($supplier['updated_at'] ?? '') . "</td>
                     <td>
                         <a href='#' class='supplierListUpdateBtn'><i class='fa-solid fa-pencil'></i> Edit</a>
-                        <a href='#' class='supplierListDeleteBtn'><i class='fa-solid fa-trash'></i> Delete</a>
+                        <a href='deleteSupplier?id=". htmlspecialchars($supplier['supplier_id']) ."' class='supplierListDeleteBtn'><i class='fa-solid fa-trash'></i> Delete</a>
                     </td>
                 </tr>
                 ";
             }
-            echo $rows;
+            return $rows;
         }
 
         public function loginUnable()
         {
             header("location: " . BASE_URL . "login");
             exit();
+        }
+
+        public function deleteSupplier()
+        {
+            if($_SERVER['REQUEST_METHOD'] === 'GET')
+            {
+                $id = trim($_GET['id']);
+                $deletingSupplier = $this->supplierModel->deleteSupplierById($id);
+                
+                if($deletingSupplier)
+                {
+                    $_SESSION['delete_supplier_feedback'] = 'successfully';
+                    header('Location: ' . BASE_URL . 'adminSuppliers');
+                    exit();
+                }
+                else
+                {
+                    header('Location: ' . BASE_URL . 'adminSuppliers');
+                    exit();
+                }
+            }
         }
 
         public function addSupplierForm()

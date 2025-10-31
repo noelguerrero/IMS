@@ -29,6 +29,14 @@
             return $stmt->fetchAll();
         }
 
+        public function deleteSupplierById($id)
+        {
+            $this->iniDb();
+            $stmt = $this->connection->prepare("DELETE FROM {$this->table} WHERE supplier_id = :id");
+            $stmt->bindParam(':id', $id);
+            return $stmt->execute();
+        }
+
         public function checkSupplierEmailAvailability($SupplierEmail)
         {
             $this->iniDb();

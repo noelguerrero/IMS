@@ -31,7 +31,7 @@
     <script>
         Swal.fire({
             icon: '<?php echo $_SESSION['delete_user_feedback'] === "successfully" ? "success" : "error"; ?>',
-            title: '<?php echo $_SESSION['delete_user_feedback'] === "successfully" ? "Delete Successfully!" : "Delete Failed!"; ?>',
+            title: '<?php echo $_SESSION['delete_user_feedback'] === "successfully" ? "Deleted Successfully!" : "Delete Failed!"; ?>',
             text: '<?php echo $_SESSION['delete_user_feedback'] === "successfully" ? "The user has been deleted successfully." : "There was an error on deleting the user. Please try again."; ?>'
         });
     </script>
@@ -68,3 +68,17 @@
     <?php unset($_SESSION['add_supplier_form_message']); ?>
 <?php endif; ?>
 <!-- ADD SUPPLIER FEEDBACK END -->
+
+
+<!-- DELETE SUPPLIER FEEDBACK -->
+<?php if(isset($_SESSION['delete_supplier_feedback'])):?>
+    <script>
+        Swal.fire({
+            icon: '<?php echo $_SESSION['delete_supplier_feedback'] === "successfully" ? "success" : "error"; ?>',
+            title: '<?php echo $_SESSION['delete_supplier_feedback'] === "successfully" ? "Deleted Successfully!" : "Delete Failed!"; ?>',
+            text: '<?php echo $_SESSION['delete_supplier_feedback'] === "successfully" ? "The supplier has been deleted successfully" : "There was an error on deleting user. Please try again."; ?>'
+        });
+    </script>
+    <?php unset($_SESSION['delete_supplier_feedback']); ?>
+<?php endif;?>    
+<!-- DELETE SUPPLIER FEEDBACK END-->

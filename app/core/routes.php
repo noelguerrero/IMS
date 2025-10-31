@@ -20,6 +20,7 @@
     // Admin Suppliers routes
     $router->add('adminSuppliers', ['controller' => 'AdminSupplierController', 'method' => isset($_SESSION['user']) ? 'index' : 'loginUnable']);  
     $router->add('addSuppliers', ['controller' => 'AdminSupplierController', 'method' => isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' ? 'addSupplier' : 'addSupplierForm']);
+    $router->add('deleteSupplier', ['controller' => 'AdminSupplierController', 'method' => isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'GET' ? 'deleteSupplier' : 'index']);
 
     // Admin Users routes
     $router->add('adminUsers', ['controller' => 'AdminUserController', 'method' => isset($_SESSION['user']) ? 'index' : 'loginUnable']);

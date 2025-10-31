@@ -39,11 +39,11 @@
                     <td>" . htmlspecialchars($user['updated_at'] ?? '') . "</td>
                     <td>
                         <a href='#' class='userListUpdateBtn' data-bs-toggle='modal' data-bs-target='#updateUserModal' data-user-id='". htmlspecialchars($user["user_id"]) ."' data-user-firstname='". htmlspecialchars($user["first_name"]) ."' data-user-lastname='". htmlspecialchars($user["last_name"]) ."' data-user-email='". htmlspecialchars($user["email"]) ."'><i class='fa-solid fa-pencil'></i> Edit</a>
-                        <a href='deleteUser?id= ". htmlspecialchars($user["user_id"]) ."' class='userListDeleteBtn'><i class='fa-solid fa-trash'></i> Delete</a>
+                        <a href='deleteUser?id=". htmlspecialchars($user["user_id"]) ."' class='userListDeleteBtn'><i class='fa-solid fa-trash'></i> Delete</a>
                     </td>
                 </tr>";
             }
-            echo $rows;
+            return $rows;
         }
 
         public function loginUnable()
